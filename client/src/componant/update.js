@@ -23,7 +23,7 @@ export default function Update(){
     useEffect(()=>{
         console.warn(id);
 
-        fetch("http://emp-crud.vercel.app/Editlist/"+id)
+        fetch("https://employee-three-gamma.vercel.app/Editlist/"+id)
         .then((response) => response.json())
         .then((response)=>{
             setEmpname(response[0].empname);
@@ -49,7 +49,7 @@ export default function Update(){
         var datastring = new FormData(event.target);
         var config = {headers : {"enctype":"multipart/form-data"}};
 
-        await axios.post('http://emp-crud.vercel.app/update',datastring,config)
+        await axios.post('https://employee-three-gamma.vercel.app/update',datastring,config)
               .then(function(res){
                 if(res.data.status === 'success'){
                     alert('Updated');

@@ -10,7 +10,7 @@ export default function Employee(){
         var datastring=new FormData(event.target);
         var config={headers :{"enctype":"multipart/form-data"}};
 
-        await axios.post("http://emp-crud.vercel.app/add",datastring,config)
+        await axios.post("https://employee-three-gamma.vercel.app/add",datastring,config)
         .then(function(res){
             if(res.data.status=="success"){
                 alert("Inserted");

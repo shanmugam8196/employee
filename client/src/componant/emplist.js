@@ -11,7 +11,7 @@ export default function Emplist(){
     },[]);
 
     const load_empdetail=()=>{
-        axios.get('http://emp-crud.vercel.app/list')
+        axios.get('https://employee-three-gamma.vercel.app/list')
         .then(function(res){
             setEmpdetail(res.data);
         })
@@ -25,7 +25,7 @@ export default function Emplist(){
         var datastring = {id:a};
         var config = {headers : {"enctype":"multipart/form-data"}};
  
-          axios.post('http://emp-crud.vercel.app/Delete',datastring,config)
+          axios.post('https://employee-three-gamma.vercel.app/Delete',datastring,config)
                .then(function(res){
                  if(res.data.status === 'success'){
                      alert('Deleted');
